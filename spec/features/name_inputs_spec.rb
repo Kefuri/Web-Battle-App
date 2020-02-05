@@ -7,6 +7,10 @@ feature 'Player entry name page' do
     fill_in "Player 1", with: "Joe"
     fill_in "Player 2", with: "Haydon"
     click_button("submit names")
+    expect(page).to have_text("Joe vs. Haydon")
     #find('input[name="commit"]').click
   end
 end
+
+feature "Player can see a monster's hitpoints" do
+  
