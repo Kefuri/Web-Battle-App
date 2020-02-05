@@ -1,6 +1,6 @@
 require 'sinatra/base'
 class App < Sinatra::Base
   get '/' do
-    "Testing infrastructure working!"
+    erb(:index)
   end
 end
