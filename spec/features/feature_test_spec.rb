@@ -26,6 +26,7 @@ feature "Player can attack" do
     sign_in_and_play
      click_button("Attack!")
      expect(page).to have_text("Haydon lost 10 health!")
+  end
 end
 
     
