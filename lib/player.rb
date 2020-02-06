@@ -12,9 +12,7 @@ class Player
   def lose_hp(health = 10)
     @health -= health
   end
-  def attack(player)
-    player.lose_hp
-  end
+  
   def health
     @health
   end
