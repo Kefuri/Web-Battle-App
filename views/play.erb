@@ -1,7 +1,10 @@
 <%= @player_1 %> vs. <%= @player_2 %>
 <br><br>
 <%= @player_1 %>'s Monster:
-Jigglypoof: 90
+Jigglypoof: <%= $player_1.health %>
+<br><br>
+<%= @player_2 %>'s Monster:
+Choorizurd: <%= $player_2.health %>
 
 <br>
 <form action="/attack" method="get">

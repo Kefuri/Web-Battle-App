@@ -15,7 +15,7 @@ describe Player do
     it 'should let player 1 attack player 2' do
       player1 = Player.new("Sophie")
       player2 = Player.new("Haydon")
-      expect { player1.attack(player2) }.to change {player2.health }.by(-10)
+      expect { player1.attack(player2) }.to change { player2.health }.by(-10)
     end
   end
 end

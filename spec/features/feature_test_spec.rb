@@ -12,7 +12,7 @@ feature "Player can see a monster's hitpoints" do
   scenario "Can display hitpoints of a monster" do
     sign_in_and_play
     expect(page).to have_text("Joe vs. Haydon")
-    expect(page).to have_text("Jigglypoof: 90")
+    expect(page).to have_text("Jigglypoof: 100")
   end
 end
 
@@ -25,7 +25,10 @@ feature "Player can attack" do
   scenario "can attack and make other player lose health" do
     sign_in_and_play
      click_button("Attack!")
-     expect(page).to have_text("Haydon lost: 10HP!")
+     expect(page).to have_text("Haydon lost: 10HP! Current HP: 90")
+     click_button("Go back")
+     expect(page).not_to have_text("Choorizurd: 100")
+     expect(page).to have_text("Choorizurd: 90")
   end
 end
 
