@@ -33,5 +33,6 @@ class App < Sinatra::Base
     @player_1 = $player_1.name
     @player_2 = $player_2.name
     erb :attack
+    
   end
 end
