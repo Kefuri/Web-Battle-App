@@ -25,7 +25,7 @@ feature "Player can attack" do
   scenario "can attack and make other player lose health" do
     sign_in_and_play
      click_button("Attack!")
-     expect(page).to have_text("Haydon lost: 10HP! Current HP: 90")
+     expect(page).to have_text("Haydon lost 10HP! Health now: 90 HP")
      click_button("Go back")
      expect(page).not_to have_text("Choorizurd: 100")
      expect(page).to have_text("Choorizurd: 90")
