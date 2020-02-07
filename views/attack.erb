@@ -1,6 +1,22 @@
+<style>
+body {background-color: orange;}
+h1   {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white; text-align: center;}
+h2   {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white; text-align: center;}
+p   {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white; text-align: center;}
+
+input[type=submit] {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1pt;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+
 <h2><%= @player_1 %> Attacked <%= @player_2 %>!</h2>
-<P>
-<%= @player_2 %> lost: 10HP! Current HP: <%= $player_2.health %>
+<p><%= @player_2 %> lost 10HP! Health now: <%= $player_2.health %> HP</p>
 
 <form action="/play" method="get">
-<input type="submit" value="Go back">
+<p><input type="submit" value="Go back"></p>

@@ -1,12 +1,26 @@
-<%= @player_1 %> vs. <%= @player_2 %>
-<br><br>
-<%= @player_1 %>'s Monster:
-Jigglypoof: <%= $player_1.health %>
-<br><br>
-<%= @player_2 %>'s Monster:
-Choorizurd: <%= $player_2.health %>
+<style>
+body {background-color: orange;}
+h1   {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white; text-align: center;}
+h2   {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white; text-align: center;}
+p    {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white; text-align: center;}
 
-<br>
+input[type=submit] {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1pt;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+
+<h2><%= @player_1 %> vs. <%= @player_2 %></h2>
+<p><%= @player_1 %>'s Monster is
+Jigglypoof: <%= $player_1.health %>HP</p>
+<p><%= @player_2 %>'s Monster is
+Choorizurd: <%= $player_2.health %>HP<p>
+
 <form action="/attack" method="get">
-<input type="submit" value="Attack!">
+<p><input type="submit" value="Attack!"></p>
 </form>

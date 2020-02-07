@@ -1,9 +1,42 @@
-<h1>Enter names for battle</h1>
+<style>
+* {
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+ color: white; 
+ text-align: center;
+}
+
+body {background-color: orange;}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+input[type=submit] {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1pt;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+
+
+
+<h1>Welcome to battle! </h1>
+<h2>Enter names for battle</h2>
+<p><img src="https://pngimg.com/uploads/pokemon/pokemon_PNG9.png" height="100" width="100" style="vertical-align:middle"></p>
+
+
 <form action='/names' method='post'>
-Player 1:<br> 
+<p>Player 1:<br>
 <input type="text" name="player_1" placeholder="Player 1">
 <br>
 Player 2: <br>
-<input type="text" name="player_2" placeholder="Player 2">
-<br>
-<input type="submit" id="submit" value="submit names">
+<input type="text" name="player_2" placeholder="Player 2"></p>
+<p><input type="submit" id="submit" value="Submit Names"></p>
